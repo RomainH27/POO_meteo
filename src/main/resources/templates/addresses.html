@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Adresses</title>
+  <meta http-equiv="Content-Type" content="text/html ; charset=UTF-8" />
+
+  <link th:href="@{/bootstrap/css/bootstrap-grid.min.css}"
+        rel="stylesheet" media="screen"/>
+
+
+</head>
+<body>
+
+
+  <div th:replace="fragments"></div>
+
+
+  <h1>Les differentes adresses</h1>
+  <ul th:each="address:${allAddresses}">
+    <li th:text="${address.content }"/>
+    <li th:text="${address.autor }"/>
+  </ul>
+
+
+</body>
+</html>
